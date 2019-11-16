@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TWF-EI-S93">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ab-Ht-Ne9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1ab-Ht-Ne9" secondAttribute="bottom" id="8aT-hJ-WKE"/>
+                            <constraint firstAttribute="trailing" secondItem="1ab-Ht-Ne9" secondAttribute="trailing" id="H9u-B1-mBu"/>
+                            <constraint firstItem="1ab-Ht-Ne9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IBV-MV-mlw"/>
+                            <constraint firstItem="1ab-Ht-Ne9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="w9O-qz-BEQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3wL-mh-npb"/>
+                    <connections>
+                        <outlet property="webview" destination="1ab-Ht-Ne9" id="GMA-dM-DZk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="-36"/>
+        </scene>
+        <!--导航-->
+        <scene sceneID="hgN-04-LM3">
+            <objects>
+                <tabBarController autoresizesArchivedViewToFullSize="NO" hidesBottomBarWhenPushed="YES" id="TWF-EI-S93" userLabel="导航" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="lQH-aW-GEA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7lA-Aq-WgL" kind="relationship" relationship="viewControllers" id="IxC-fS-EiA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KYi-YT-ka5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1300" y="-36"/>
+        </scene>
+        <!--首页标题-->
+        <scene sceneID="iyw-YO-EV5">
+            <objects>
+                <navigationController autoresizesArchivedViewToFullSize="NO" hidesBottomBarWhenPushed="YES" id="7lA-Aq-WgL" userLabel="首页标题" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="DOe-sz-dBK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Kev-jg-Eva">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.10980392160000001" green="0.30196078430000001" blue="0.59999999999999998" alpha="1" colorSpace="deviceRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="uuf-tP-T7d">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FdJ-wQ-4UG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VYi-mj-hJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-577" y="-36"/>
+        </scene>
+    </scenes>
+</document>
